@@ -50,6 +50,7 @@ An email address is basicly a string, so it would be helpful if we could use the
 
 ```
 var Email = ValueObject.create('Email', {
+
 	// Extends all methods from String (like substr, split, match, etc.)
 	extends: 'String',
 	
@@ -62,8 +63,8 @@ var Email = ValueObject.create('Email', {
 
 var email = new Email('example@domain.com');
 
-console.log(email.getDomainPart()); // logs 'domain.com'
 console.log(email.substr(0, 7)); // logs 'example'
+console.log(email.getDomainPart()); // logs 'domain.com'
 ```
 
 ## Documentation
