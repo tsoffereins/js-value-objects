@@ -1,7 +1,7 @@
 {
   "name": "value-object-js",
   "version": "1.0.0",
-  "description": "Introduces the use of value objects in JavaScript.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[usr",
+  "description": "Introduces value objects in JavaScript.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[usr",
   "main": "src/value-object.js",
   "dependencies": {
     "bower": "^1.7.9"
@@ -11,7 +11,9 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-exec": "^2.1.2",
-    "gulp-minify": "0.0.11"
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify": "0.0.11",
+    "jshint": "^2.9.2"
   },
   "scripts": {
     "test": "jasmine"
@@ -26,7 +28,7 @@
     "object"
   ],
   "author": "Thomas Offereins",
-  "license": "MIT",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/tsoffereins/js-value-objects/issues"
   },
