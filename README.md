@@ -19,9 +19,7 @@ var Email = ValueObject.create('Email', function(value) {
 Using the defined value object is now as simple as creating any object using the `new` keyword for creating a new instance from a value. Whenever the
 
 ```
-var customerEmail = new Email(123); // Throws InvalidArgumentException
 var customerEmail = new Email('example.domain.com'); // Throws InvalidArgumentException
-var customerEmail = new Email('example@domain'); // Throws InvalidArgumentException
 
 var customerEmail = new Email('example@domain.com'); // Works!
 ```
@@ -30,6 +28,7 @@ The value object can now be handled like you would a String object.
 
 ```
 console.log(customerEmail); // logs an object
+
 console.log('Hi! Mail me at: ' + customerEmail); // logs 'Hi! Mail me at: example@domain.com'
 ```
 
@@ -44,7 +43,7 @@ var email2 = new Email('example@domain.com');
 console.log(email1 === email2); // logs true
 ```
 
-### Extending native data types.
+### Adding methods
 
 An email address is basicly a string, so it would be helpful if we could use the same methods. This can be done by specifying which data type (or other value object!) should be extended in the definition. You can also add your own methods.
 
