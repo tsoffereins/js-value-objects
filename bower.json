@@ -1,0 +1,22 @@
+{
+  "name": "value-object-js",
+  "description": "Introduces the use of value objects in JavaScript.",
+  "main": "src/vallue-object.js",
+  "keywords": [
+    "javascript",
+    "value",
+    "object"
+  ],
+  "authors": [
+    "Thomas Offereins"
+  ],
+  "license": "MIT",
+  "homepage": "dev.tsoffereins.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

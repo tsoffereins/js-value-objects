@@ -1,0 +1,28 @@
+{
+  "name": "value-object-js",
+  "version": "1.0.0",
+  "description": "Introduces the use of value objects in JavaScript.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[usr",
+  "main": "src/value-object.js",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsoffereins/js-value-objects.git"
+  },
+  "keywords": [
+    "javascript",
+    "value",
+    "object"
+  ],
+  "author": "Thomas Offereins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsoffereins/js-value-objects/issues"
+  },
+  "homepage": "https://github.com/tsoffereins/js-value-objects#readme"
+}
