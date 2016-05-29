@@ -52,7 +52,7 @@ var email1 = new Email('example@domain.com');
 var email2 = new Email('example@domain.com');
 
 console.log(email1 === email2); // logs true
-console.log(email1 instanceOf Email); // logs true
+console.log(email1 instanceof Email); // logs true
 ```
 
 ### Adding methods
