@@ -78,27 +78,27 @@
 	 * Define a new ValueObject.
 	 * 
 	 * @param  string  name
-	 * @param  function|object  options
+	 * @param  function|object  definition
 	 * @return object
 	 */
-	ValueObject.define = function(name, options)
+	ValueObject.define = function(name, definition)
 	{
 		name = name.charAt(0).toUpperCase() + name.slice(1);
 
 		// If the second argument that was passed is a function we expect it to be the 
 		// validate function, because that is the only required method. We make an
-		// object of options containing that validate function as a method.
-		if (typeof options === 'function')
+		// object of definition containing that validate function as a method.
+		if (typeof definition === 'function')
 		{
-			var validate = options;
+			var validate = definition;
 
-			options = { validate: validate };
+			definition = { validate: validate };
 		}
 
 		// A value object should always have a validate function, because it can only 
 		// exist under certain conditions. If it is a function, it will be assigned 
 		// to the prototype and the constructor to also support external use.
-		if (typeof options.validate !== 'function')
+		if (typeof definition.validate !== 'function')
 		{
 			throw new Error('ValueObject [' + name + '] can not be created without a validate method.');
 		}
@@ -116,20 +116,20 @@
 
 		object.prototype = Object.create(ValueObject.prototype);
 
-		// The options-object that was passed will be treated as the blueprint for the 
+		// The definition-object that was passed will be treated as the blueprint for the 
 		// new value object. Everyting in there will end up as a property or method 
 		// of the object; also allowing you to 'override' inherited functions.
-		for (var prop in options)
+		for (var prop in definition)
 		{
-			object.prototype[prop] = options[prop];
+			object.prototype[prop] = definition[prop];
 		}
 
 		// Sometimes it might be handy to inherit the methods of native data types like 
 		// String, Number or Date. In the 'extend' option we will expect that object
 		// and copy all methods (no properties) to the value object.
-		if (options.extend)
+		if (definition.extend)
 		{
-			copyMethods(object, options.extend);
+			copyMethods(object, definition.extend);
 		}
 
 		object.prototype.name = name;
@@ -143,7 +143,7 @@
 		var constructor = function(value)
 		{
 			// It might be more convenient to pass more than one argument in some cases. 
-			// If that is the case, we will bundle them in an object and pass 
+			// If that is the case, we will bundle them in an array and pass 
 			// them through to the constructor of the value object.
 			if (arguments.length > 1)
 			{
