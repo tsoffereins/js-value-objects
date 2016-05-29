@@ -22,7 +22,7 @@
 		{
 			this.throwException();
 
-			throw new InvalidValueException(this);
+			throw new InvalidArgumentException(this);
 		}
 	};
 
@@ -75,13 +75,13 @@
 	ValueObject.library = Object.create(null);
 
 	/**
-	 * Create a new ValueObject.
+	 * Define a new ValueObject.
 	 * 
 	 * @param  string  name
 	 * @param  function|object  options
 	 * @return object
 	 */
-	ValueObject.create = function(name, options)
+	ValueObject.define = function(name, options)
 	{
 		name = name.charAt(0).toUpperCase() + name.slice(1);
 
@@ -171,7 +171,7 @@
 	 * @param  string|object  object
 	 * @return void
 	 */
-	var InvalidValueException = function(object)
+	var InvalidArgumentException = function(object)
 	{
 		if (typeof object === 'object')
 		{

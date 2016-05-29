@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('DateRange', {
+	ValueObject.define('DateRange', {
 
 		/**
 		 * Create a date from the value.

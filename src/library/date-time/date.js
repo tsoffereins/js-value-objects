@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('Date', {
+	ValueObject.define('Date', {
 
 		/**
 		 * The objects to extend.

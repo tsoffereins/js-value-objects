@@ -7,7 +7,7 @@
 	 */
 	var regex = /(http|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
 	
-	ValueObject.create('URL', {
+	ValueObject.define('URL', {
 
 		/**
 		 * The objects to extend.

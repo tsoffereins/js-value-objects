@@ -7,7 +7,7 @@
 	 */
 	var regex = /https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)/;
 
-	ValueObject.create('VimeoVideoURL', {
+	ValueObject.define('VimeoVideoURL', {
 
 		/**
 		 * The objects to extend.

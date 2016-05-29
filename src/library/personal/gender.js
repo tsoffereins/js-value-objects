@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('Gender', {
+	ValueObject.define('Gender', {
 
 		/**
 		 * Allow male and female as Boolean value (like stored in DB).

@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('Zipcode', {
+	ValueObject.define('Zipcode', {
 
 		/**
 		 * Allow zipcodes to be entered with or without a space and case insensitive.

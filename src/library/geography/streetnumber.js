@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('Streetnumber', {
+	ValueObject.define('Streetnumber', {
 
 		/**
 		 * Parse the value by removing spaces and making it uppercase.

@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('Age', {
+	ValueObject.define('Age', {
 
 		/**
 		 * The objects to extend.
@@ -23,7 +23,7 @@
 		/**
 		 * Determine if the value is either male or female.
 		 * 
-		 * @param  ValueObject.Literal.Integer  value
+		 * @param  int  value
 		 * @return Boolean
 		 */
 		validate: function(value)
