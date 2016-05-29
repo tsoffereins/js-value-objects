@@ -1,8 +1,17 @@
 # Value Object JS
-The Value Object is a usefull, well known design pattern in a lot of languages. JavaScript is not one of them, until now. This library allows you to create your own 'Data types' as value object in order to better structure your application logic.
+The Value Object is a usefull, well known design pattern in a lot of languages. JavaScript is not one of them, until now. This plugin allows you to create your own 'Data types' as value object in order to better structure your application logic.
 
 ## Installation
 `bower install --save value-object-js`
+
+```
+<script src="/bower_components/dist/value-object.min.js"></script>
+<script>
+	// Do your awesome stuff here
+</script>
+```
+
+Besides the value-object.js file, this package also provides a set of predefined value objects like DateRang, Email, URL, YoutubeVideoURL and more. This library can be loaded on its own (value-object-library.min.js) or as part of the main file (value-ibject.with-library.min.js).
 
 ## Usage
 
@@ -71,4 +80,8 @@ console.log(email.getDomainPart()); // logs 'domain.com'
 
 ## Documentation
 
+For full documentation see http://dev.tsoffereins.com/value-object-js.s
+
 ## Support
+
+Please file issues here at GitHub.
