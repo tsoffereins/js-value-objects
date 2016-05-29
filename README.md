@@ -19,7 +19,7 @@ Besides the value-object.js file, this package also provides a set of predefined
 
 A value object only requires a name and a validation function testing the passed value.
 
-```
+```javascript
 var Email = ValueObject.define('Email', function(value) {
 	return /(.+)@(.+){2,}\.(.+){2,}/.test(value);
 });
@@ -27,7 +27,7 @@ var Email = ValueObject.define('Email', function(value) {
 
 Using the defined value object is now as simple as instantiating any object using the `new` keyword. Defined value objects can also be found in the library. 
 
-```
+```javascript
 var customerEmail = new Email('example.domain.com'); // Throws InvalidArgumentException
 
 var customerEmail = new Email('example@domain.com'); // Works!
@@ -37,7 +37,7 @@ var customerEmail = new ValueObject.Library.Email('example@domain.com'); // Work
 
 The value object can now be handled like you would a String object.
 
-```
+```javascript
 console.log(customerEmail); // logs an object
 
 console.log('Hi! Mail me at: ' + customerEmail); // logs 'Hi! Mail me at: example@domain.com'
@@ -47,7 +47,7 @@ console.log('Hi! Mail me at: ' + customerEmail); // logs 'Hi! Mail me at: exampl
 
 Objects in javascript are equal on identity, not on value. Value objects, however, are equal on value and can be compared with strict equality. They even can be tested with `instanceOf`. 
 
-```
+```javascript
 var email1 = new Email('example@domain.com');
 var email2 = new Email('example@domain.com');
 
@@ -59,7 +59,7 @@ console.log(email1 instanceOf Email); // logs true
 
 An email address is basicly a string, so it would be helpful if we could use the same methods. This can be done by specifying which data type (or other value object!) should be extended in the definition. You can also add your own methods.
 
-```
+```javascript
 var Email = ValueObject.create('Email', {
 
 	// Extends all methods from String (like substr, split, match, etc.)
