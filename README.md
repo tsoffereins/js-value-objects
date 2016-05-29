@@ -80,7 +80,7 @@ console.log(email.getDomainPart()); // logs 'domain.com'
 
 ## Documentation
 
-For full documentation see http://dev.tsoffereins.com/value-object-js.
+For full documentation see http://dev.tsoffereins.com/value-object-js/documentation/.
 
 ## Support
 
