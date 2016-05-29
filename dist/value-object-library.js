@@ -1,6 +1,6 @@
 (function()
 {
-	ValueObject.create('DateRange', {
+	ValueObject.define('DateRange', {
 
 		/**
 		 * Create a date from the value.
@@ -135,7 +135,7 @@
 })();
 (function()
 {
-	ValueObject.create('Date', {
+	ValueObject.define('Date', {
 
 		/**
 		 * The objects to extend.
@@ -169,7 +169,7 @@
 })();
 (function()
 {
-	ValueObject.create('Streetnumber', {
+	ValueObject.define('Streetnumber', {
 
 		/**
 		 * Parse the value by removing spaces and making it uppercase.
@@ -196,7 +196,7 @@
 })();
 (function()
 {
-	ValueObject.create('Zipcode', {
+	ValueObject.define('Zipcode', {
 
 		/**
 		 * Allow zipcodes to be entered with or without a space and case insensitive.
@@ -228,7 +228,7 @@
 })();
 (function()
 {
-	ValueObject.create('Age', {
+	ValueObject.define('Age', {
 
 		/**
 		 * The objects to extend.
@@ -251,7 +251,7 @@
 		/**
 		 * Determine if the value is either male or female.
 		 * 
-		 * @param  ValueObject.Literal.Integer  value
+		 * @param  int  value
 		 * @return Boolean
 		 */
 		validate: function(value)
@@ -262,7 +262,7 @@
 })();
 (function()
 {
-	ValueObject.create('Gender', {
+	ValueObject.define('Gender', {
 
 		/**
 		 * Allow male and female as Boolean value (like stored in DB).
@@ -298,7 +298,7 @@
 	 */
 	var regex = /https?:\/\/(?:www\.|player\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|video\/|)(\d+)(?:$|\/|\?)/;
 
-	ValueObject.create('VimeoVideoURL', {
+	ValueObject.define('VimeoVideoURL', {
 
 		/**
 		 * The objects to extend.
@@ -340,7 +340,7 @@
 	 */
 	var regex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
 
-	ValueObject.create('YoutubeVideoURL', {
+	ValueObject.define('YoutubeVideoURL', {
 
 		/**
 		 * The objects to extend.
@@ -382,7 +382,7 @@
 	 */
 	var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	
-	ValueObject.create('Email', {
+	ValueObject.define('Email', {
 
 		/**
 		 * The objects to extend.
@@ -432,7 +432,7 @@
 	 */
 	var regex = /(http|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
 	
-	ValueObject.create('URL', {
+	ValueObject.define('URL', {
 
 		/**
 		 * The objects to extend.
