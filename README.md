@@ -6,22 +6,24 @@ The Value Object is a usefull, well known design pattern in a lot of languages. 
 
 ## Usage
 
-### Create a value object
+### Define a value object
 
 A value object only requires a name and a validation function testing the passed value.
 
 ```
-var Email = ValueObject.create('Email', function(value) {
+var Email = ValueObject.define('Email', function(value) {
 	return /(.+)@(.+){2,}\.(.+){2,}/.test(value);
 });
 ```
 
-Using the defined value object is now as simple as creating any object using the `new` keyword for creating a new instance from a value. Whenever the
+Using the defined value object is now as simple as instantiating any object using the `new` keyword. Defined value objects can also be found in the library. 
 
 ```
 var customerEmail = new Email('example.domain.com'); // Throws InvalidArgumentException
 
 var customerEmail = new Email('example@domain.com'); // Works!
+
+var customerEmail = new ValueObject.Library.Email('example@domain.com'); // Works!
 ```
 
 The value object can now be handled like you would a String object.
@@ -34,13 +36,14 @@ console.log('Hi! Mail me at: ' + customerEmail); // logs 'Hi! Mail me at: exampl
 
 ### Comparing value objects
 
-Objects in javascript are equal on identity, not on value. Value objects, however, are equal on value.
+Objects in javascript are equal on identity, not on value. Value objects, however, are equal on value and can be compared with strict equality. They even can be tested with `instanceOf`. 
 
 ```
 var email1 = new Email('example@domain.com');
 var email2 = new Email('example@domain.com');
 
 console.log(email1 === email2); // logs true
+console.log(email1 instanceOf Email); // logs true
 ```
 
 ### Adding methods
