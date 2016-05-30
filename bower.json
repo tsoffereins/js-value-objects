@@ -1,7 +1,7 @@
 {
   "name": "value-object-js",
   "description": "Introduces value objects in JavaScript.",
-  "main": "dist/value-object.min.js",
+  "main": "dist/value-object.js",
   "keywords": [
     "javascript",
     "value",
@@ -18,10 +18,14 @@
   "license": "MIT",
   "homepage": "http://dev.tsoffereins.com/value-object-js",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "spec",
+    "tests",
+    ".gitignore",
+    "package.json",
+    "gulpfile.js",
+    "README.md"
   ]
 }
