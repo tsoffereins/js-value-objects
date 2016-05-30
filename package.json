@@ -24,7 +24,12 @@
   "keywords": [
     "javascript",
     "value",
-    "object"
+    "object",
+    "domain",
+    "driven",
+    "design",
+    "ddd",
+    "library"
   ],
   "author": "Thomas Offereins",
   "license": "MIT",
