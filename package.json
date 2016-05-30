@@ -1,6 +1,6 @@
 {
   "name": "value-object-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Introduces value objects in JavaScript.",
   "main": "dist/value-object.js",
   "dependencies": {},
