@@ -5,7 +5,7 @@ The Value Object is a usefull, well known design pattern in a lot of languages. 
 ### Bower
 `bower install --save value-object-js`
 
-```
+```javascript
 <script src="/bower_components/value-object-js/dist/value-object.min.js"></script>
 <script>
 	var Email = ValueObject.define('Email', function() { ... });
@@ -19,7 +19,7 @@ Besides the value-object.js file, this package also provides a set of predefined
 ### NPM
 `npm install --save value-object-js`
 
-```
+```javascript
 var ValueObject = require('value-object-js');
 
 var Email = ValueObject.define('Email', function() { ... });
