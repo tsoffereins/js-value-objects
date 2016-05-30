@@ -1,4 +1,4 @@
-(function()
+(function(root)
 {
 	/**
 	 * Construct a new ValueObject.
@@ -6,7 +6,7 @@
 	 * @param  mixed  value
 	 * @return object
 	 */
-	var ValueObject = window.ValueObject = function(value)
+	var ValueObject = root.ValueObject = function(value)
 	{
 		// To prevent the value from being changed we will assign it as an immutable 
 		// property to the object. First it will be parsed to allow a bigger range 
@@ -22,7 +22,7 @@
 		{
 			this.throwException();
 
-			throw new InvalidArgumentException(this);
+			throw new InvalidValueException(this);
 		}
 	};
 
@@ -98,7 +98,7 @@
 		// A value object should always have a validate function, because it can only 
 		// exist under certain conditions. If it is a function, it will be assigned 
 		// to the prototype and the constructor to also support external use.
-		if (typeof definition.validate !== 'function')
+		if (typeof definition !== 'object' || typeof definition.validate !== 'function')
 		{
 			throw new Error('ValueObject [' + name + '] can not be created without a validate method.');
 		}
@@ -171,7 +171,7 @@
 	 * @param  string|object  object
 	 * @return void
 	 */
-	var InvalidArgumentException = function(object)
+	var InvalidValueException = ValueObject.InvalidValueException = function(object)
 	{
 		if (typeof object === 'object')
 		{
@@ -184,6 +184,8 @@
 
 		this.type = object.name;
 	};
+
+	InvalidValueException.prototype = Error.prototype;
 
 	/**
 	 * Define an immutable property on a object.
@@ -299,4 +301,6 @@
 		return table[key];
 	};
 
-}());
+	module.exports = ValueObject;
+
+}(this));

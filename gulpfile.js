@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var minify = require('gulp-minify');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
+var jshint = require('gulp-jshint');
+var jasmine = require('gulp-jasmine');
 
 
 /**
@@ -31,6 +33,8 @@ function combineLibraryFiles()
 	gulp.src('./src/library/**/*.js')
 		.pipe(concat('value-object-library.js'))
 		.pipe(gulp.dest('./dist/'))
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'))
 		.pipe(minify({
 			ext: { min: '.min.js' }
 		}))
@@ -48,8 +52,13 @@ gulp.task('combine-lib-files', combineLibraryFiles);
  */
 function deployMainFile()
 {
+	gulp.src('./spec/value-object-spec.js')
+		.pipe(jasmine());
+
 	gulp.src('./src/value-object.js')
 		.pipe(gulp.dest('./dist/'))
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'))
 		.pipe(minify({
 			ext: { min: '.min.js' }
 		}))

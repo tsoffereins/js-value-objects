@@ -11,7 +11,7 @@
     "Thomas Offereins"
   ],
   "license": "GNU",
-  "homepage": "dev.tsoffereins.com",
+  "homepage": "http://dev.tsoffereins.com/value-object-js",
   "ignore": [
     "**/.*",
     "node_modules",
