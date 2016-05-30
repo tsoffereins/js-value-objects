@@ -5,22 +5,28 @@ The Value Object is a usefull, well known design pattern in a lot of languages. 
 ### Bower
 `bower install --save value-object-js`
 
-```
-<script src="/bower_components/dist/value-object.min.js"></script>
+```javascript
+<script src="/bower_components/value-object-js/dist/value-object.min.js"></script>
 <script>
-	// Do your awesome stuff here
+	var Email = ValueObject.define('Email', function() { ... });
+	
+	// ...
 </script>
-```
-### NPM
-`npm install --save value-object-js`
-
-```
-var ValueObject = require('value-object-js');
-
-// Do your awesome stuff here
 ```
 
 Besides the value-object.js file, this package also provides a set of predefined value objects like DateRang, Email, URL, YoutubeVideoURL and more. This library can be loaded on its own (value-object-library.min.js) or as part of the main file (value-ibject.with-library.min.js).
+
+### NPM
+`npm install --save value-object-js`
+
+```javascript
+var ValueObject = require('value-object-js');
+
+var Email = ValueObject.define('Email', function() { ... });
+
+// ...
+```
+
 
 ## Usage
 
