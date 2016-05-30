@@ -2,7 +2,7 @@
   "name": "value-object-js",
   "version": "1.0.1",
   "description": "Introduces value objects in JavaScript.",
-  "main": "src/value-object.js",
+  "main": "dist/value-object.min.js",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",

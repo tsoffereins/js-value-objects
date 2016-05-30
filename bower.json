@@ -1,7 +1,7 @@
 {
   "name": "value-object-js",
   "description": "Introduces value objects in JavaScript.",
-  "main": "dist/value-object.js",
+  "main": "dist/value-object.min.js",
   "keywords": [
     "javascript",
     "value",
