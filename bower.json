@@ -5,7 +5,12 @@
   "keywords": [
     "javascript",
     "value",
-    "object"
+    "object",
+    "domain",
+    "driven",
+    "design",
+    "ddd",
+    "library"
   ],
   "authors": [
     "Thomas Offereins"
