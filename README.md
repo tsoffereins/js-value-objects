@@ -47,7 +47,7 @@ var customerEmail = new Email('example.domain.com'); // Throws InvalidArgumentEx
 
 var customerEmail = new Email('example@domain.com'); // Works!
 
-var customerEmail = new ValueObject.Library.Email('example@domain.com'); // Works!
+var customerEmail = new ValueObject.library.Email('example@domain.com'); // Works!
 ```
 
 The value object can now be handled like you would a String object.
