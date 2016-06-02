@@ -15,7 +15,7 @@
   "authors": [
     "Thomas Offereins"
   ],
-  "license": "MIT",
+  "license": "GNU",
   "homepage": "http://dev.tsoffereins.com/value-object-js",
   "ignore": [
     "node_modules",
